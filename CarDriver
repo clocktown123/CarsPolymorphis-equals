@@ -1,0 +1,16 @@
+public class CarDriver {
+    public static void main(String[] args){
+        Car[] cars = new Car[100];
+        cars[0] = new Car("Chevrolet", 2009, "Red");
+        cars[1] = new Car("Honda", 2009, "Red");
+
+        if (cars[0].equals(cars[1])){
+            System.out.println("cars have identical features");
+            cars[0].display(cars[1]);
+        }
+        else{
+            System.out.println("cars are different");
+            cars[0].display(cars[1]);
+        }
+    }
+}
