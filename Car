@@ -1,0 +1,34 @@
+public class Car {
+    private String make;
+    private int year;
+    private String color;
+
+    public Car(String make, int year, String color){
+        this.make = make;
+        this.year = year;
+        this.color = color;
+    }
+
+    public void display(Car otherCar){
+        if (this.equals(otherCar)){
+            System.out.printf("The car's make is a %s, the cars year is %s, and the cars color is %s%n", this.make, this.year, this.color);
+        }
+        else{
+            System.out.printf("The first car's make is a %s, the cars year is %s, and the cars color is %s%n", this.make, this.year, this.color);
+            System.out.printf("The second car's make is a %s, the cars year is %s, and the cars color is %s%n", otherCar.make, otherCar.year, otherCar.color);
+        }
+
+    }
+
+    public boolean equals(Car car){
+        if(this.make.equals(car.make) && this.year == car.year && this.color.equals(car.color)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+
+
+}
